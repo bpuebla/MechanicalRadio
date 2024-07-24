@@ -12,6 +12,9 @@ The objective of the project is to develop a working radio that produces endless
 -	Transformation of text to a clip of speech
 -	Joining of both clips and presentation on the app
 
+
+
+---
 ## Documentation
 ### App (main.dart)
 
@@ -37,7 +40,7 @@ Stateful widget that builds the template for the pages.
 - _onWillPop() : Avoids quitting when back button is pressed.
 
 
-### Radio
+### Radio (radio_widget.dart)
 
 Stateful widget that builds the body of the radio, provided the news. Allows for the user to select a topic and city, and get news with it in audio form.
 
@@ -76,20 +79,20 @@ Stateful widget that builds the body of the radio, provided the news. Allows for
 - _togglePlaying(): Starts periodicInfo() if the button has been pressed on play or disposeTimer() if it is paused. Switches _isPlaying with setState, switching the icon of the button.
 
 
-### MyTextFormField
+### MyTextFormField (text_form.dart)
 
 Stateless Widget used for creating custom TextFormField. Must be provided with an onSave function and a hintText. Incorporates a validator that checks for empty input.
 ##### Methods
 - build(context) : Incorporates a validator that checks for empty input. Sets onSave and hintText.
 
 
-### InfoPage
-Stateless widget that builds the body of the information display.
+### InfoPage (info.dart)
+Stateful widget that builds the body of the information display.
 ##### Methods
 - build(context) : Display information text about creators and Github repository button
 - openGit(context) : Opens URL of repository internally (originally wanted to be an external browser but did not know how)
 
-### Web Scraping
+### Web Scraping (web.dart)
 
 Functions dedicated to parsing relevant data from some websites.
 
@@ -104,6 +107,28 @@ Functions dedicated to parsing relevant data from some websites.
 - wikipedia(spacedQuery) : Parses the first paragraph of the first result for a query. Information is retrieved from wikipedia.org
 - wikipediaNews() : Parses the top news items for a given day.
 
-### Palette
+### Palette (palette.dart)
 
 MaterialColor swatch for green/blue desaturated tones, from 0 to 100%.
+
+---
+## Credits
+"Stay the Course" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+"Local Forecast - Slower" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+"Smooth Lovin" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+"Sincerely" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+"Springish" Gillicuddy (https://freemusicarchive.org/music/gillicuddy/)
+Licensed under CC BY-NC 3.0 License
+https://creativecommons.org/licenses/by-nc/3.0/
